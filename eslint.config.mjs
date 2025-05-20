@@ -26,6 +26,7 @@ const eslintConfig = [
     'plugin:storybook/recommended',
     'airbnb-base',
     'plugin:react/recommended',
+    'prettier',
   ),
   eslint.configs.recommended,
   {
@@ -66,7 +67,7 @@ const eslintConfig = [
       'react/boolean-prop-naming': 'error',
       'react/no-unknown-property': ['error', { ignore: ['jsx'] }],
       "react/jsx-child-element-spacing": "error",
-        "react/jsx-closing-bracket-location": "error",
+      "react/jsx-closing-bracket-location": "error",
       "react/jsx-max-depth": ["error", { "max": 3 }],
       "react/jsx-no-bind": ["warn", {
         "ignoreDOMComponents": false,
