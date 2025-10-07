@@ -15,7 +15,11 @@
     "build-storybook": "storybook build",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
-    "prepare": "husky"
+    "prepare": "husky",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -25,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.9.1",
     "@radix-ui/react-dropdown-menu": "^2.1.5",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.1",
@@ -82,7 +87,8 @@
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.46.0"
+    "typescript-eslint": "^8.46.0",
+    "wrangler": "^4.42.0"
   },
   "eslintConfig": {
     "extends": [
