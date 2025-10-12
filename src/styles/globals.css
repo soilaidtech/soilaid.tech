@@ -34,6 +34,7 @@ body {
 	font-weight: 500;
 	color: #052e26;
 	text-transform: uppercase;
+	gap: 1.5rem;
 }
 
 .btn {
