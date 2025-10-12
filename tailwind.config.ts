@@ -1,4 +1,6 @@
 import type { Config } from 'tailwindcss'
+import animate from 'tailwindcss-animate'
+import daisyui from 'daisyui'
 
 export default {
 	darkMode: ['class'],
@@ -6,8 +8,15 @@ export default {
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/**/*.{stories,story}.{js,jsx,ts,tsx,mdx}',
+		'./.storybook/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		container: {
+			center: true,
+			padding: '1rem',
+			screens: { '2xl': '1280px' },
+		},
 		extend: {
 			colors: {
 				background: 'hsl(var(--background))',
@@ -58,6 +67,9 @@ export default {
 			},
 		},
 	},
-	// eslint-disable-next-line @typescript-eslint/no-require-imports,global-require,import/no-extraneous-dependencies
-	plugins: [require('tailwindcss-animate'), require('daisyui')],
+	daisyui: {
+		themes: false,
+		logs: false,
+	},
+	plugins: [daisyui, animate],
 } satisfies Config
