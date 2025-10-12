@@ -23,6 +23,20 @@ body {
 	font-family: 'DM Sans', Helvetica, sans-serif;
 }
 
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header-menu {
+	font-family: 'DM Sans', Helvetica, sans-serif;
+	font-weight: 500;
+	color: #052e26;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
