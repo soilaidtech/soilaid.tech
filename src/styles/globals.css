@@ -36,20 +36,74 @@ body {
 	text-transform: uppercase;
 }
 
-.btn-soilaid {
+.btn {
 	font-family: 'DM Sans', Helvetica, sans-serif;
 	opacity: 100%;
 	border-top-left-radius: 35px;
 	border-top-right-radius: 70px;
 	border-bottom-left-radius: 70px;
 	border-bottom-right-radius: 35px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.75rem 1.25rem;
+	line-height: 1;
+	letter-spacing: 0.01rem;
+	font-weight: 600;
+	border: 2px solid transparent;
+	cursor: pointer;
+	user-select: none;
+
+	transition:
+		background-color 160ms ease,
+		border-color 160ms ease color 160ms ease border 160ms ease,
+		box-shadow 160ms ease transform 60ms ease;
+}
+
+.btn:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 4px rgb(255, 255, 255); /* soft brand ring */
+}
+
+.btn-primary {
 	background-color: #576036;
 	color: white;
 	border-color: #576036;
 }
+.btn-primary:hover:not(:disabled):not([aria-disabled='true']) {
+	background-color: #4d572f; /* slightly darker */
+	border-color: #4d572f;
+}
+.btn-soilaid:active:not(:disabled):not([aria-disabled='true']) {
+	background-color: #434d2a;
+	border-color: #434d2a;
+}
 
 .btn-outline {
-	border-color: #576036;
+	background-color: transparent;
+	color: #576036;
+	border-color: currentColor;
+}
+.btn-outline:hover:not(:disabled):not([aria-disabled='true']) {
+	background-color: #e8ecd9;
+}
+.btn-outline:active:not(:disabled):not([aria-disabled='true']) {
+	background-color: #dfe5c9;
+}
+
+.btn-secondary {
+	background-color: #b4c5e4;
+	color: #0d1321;
+	border-color: #b4c5e4;
+}
+.btn-secondary:hover:not(:disabled):not([aria-disabled='true']) {
+	background-color: #a6b9db;
+	border-color: #a6b9db;
+}
+.btn-secondary:active:not(:disabled):not([aria-disabled='true']) {
+	background-color: #95abd1;
+	border-color: #95abd1;
 }
 
 @layer base {
