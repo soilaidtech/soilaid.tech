@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import logo from '@/assests/soilaid-logo.svg'
+import logo from '@/assests/soilaid-logo-green.svg'
 
 export default function Logo() {
 	return (
 		<div className="flex items-center logo-container">
-			<Image src={logo} width={300} height={300} alt="SOILAID LOGO" />
+			<Image src={logo} alt="SOILAID LOGO" />
 		</div>
 	)
 }

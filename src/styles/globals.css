@@ -23,17 +23,48 @@ body {
 	font-family: 'DM Sans', Helvetica, sans-serif;
 }
 
-.logo-container {
+.nav-header {
 	display: flex;
+	width: 80rem;
+	justify-content: space-between;
 	align-items: center;
-	justify-content: center;
-}
-
-.header-menu {
 	font-family: 'DM Sans', Helvetica, sans-serif;
+	padding: 1.5rem 2.5rem;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 	font-weight: 500;
+	background-color: white;
 	color: #052e26;
 	text-transform: uppercase;
+	gap: 2rem;
+}
+
+.navbar-logo-container {
+	display: flex;
+	width: 14rem;
+	align-items: flex-end;
+	gap: 0.1rem;
+	flex-shrink: 0;
+}
+
+.navbar-buttons-container {
+	display: flex;
+	width: 5rem;
+	align-items: center;
+	gap: 0.5rem;
+	flex-shrink: 0;
+}
+
+.navbar-menu-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1 1 0;
+	gap: 1rem;
+}
+
+.menu-list {
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 .btn {
@@ -51,7 +82,7 @@ body {
 	line-height: 1;
 	letter-spacing: 0.01rem;
 	font-weight: 600;
-	border: 2px solid transparent;
+	border: 1.5px solid transparent;
 	cursor: pointer;
 	user-select: none;
 
@@ -63,7 +94,7 @@ body {
 
 .btn:focus-visible {
 	outline: none;
-	box-shadow: 0 0 0 4px rgb(255, 255, 255); /* soft brand ring */
+	box-shadow: 0 0 0 4px rgb(255, 255, 255);
 }
 
 .btn-primary {
@@ -72,7 +103,7 @@ body {
 	border-color: #576036;
 }
 .btn-primary:hover:not(:disabled):not([aria-disabled='true']) {
-	background-color: #4d572f; /* slightly darker */
+	background-color: #4d572f;
 	border-color: #4d572f;
 }
 .btn-soilaid:active:not(:disabled):not([aria-disabled='true']) {
