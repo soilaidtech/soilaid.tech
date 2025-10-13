@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '@/assests/soilaid-logo-green.svg'
+import logo from '@/assets/soilaid-logo-green.svg'
 
 export default function Logo() {
 	return (
