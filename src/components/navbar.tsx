@@ -30,12 +30,12 @@ export default function Navbar() {
 				</ul>
 			</div>
 			<div className="navbar-end navbar-buttons-container">
-				<button type="button" className="btn btn-outline">
+				<Link href="/newsletter" className="btn btn-outline">
 					Read Newsletter
-				</button>
-				<button type="button" className="btn btn-primary">
+				</Link>
+				<Link href="waitlist" className="btn btn-primary">
 					Join Waiting List
-				</button>
+				</Link>
 			</div>
 		</nav>
 	)
