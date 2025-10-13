@@ -3,11 +3,11 @@ import Logo from './logo'
 
 export default function Navbar() {
 	return (
-		<nav className="navbar nav-header w-full flex">
-			<div className="navbar-start navbar-logo-container">
+		<nav className="nav-header" role="navigation" aria-label="Primary">
+			<div className="navbar-logo-container">
 				<Logo />
 			</div>
-			<div className="navbar-center navbar-menu-container ">
+			<div className="navbar-menu-container ">
 				<ul className="menu menu-horizontal items-center menu-list">
 					<li>
 						<Link href="/">Home</Link>
@@ -29,7 +29,7 @@ export default function Navbar() {
 					</li>
 				</ul>
 			</div>
-			<div className="navbar-end navbar-buttons-container">
+			<div className="navbar-buttons-container">
 				<Link href="/newsletter" className="btn btn-outline">
 					Read Newsletter
 				</Link>

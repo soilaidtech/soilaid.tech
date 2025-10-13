@@ -31,7 +31,11 @@
 	--radius-md: 8px;
 	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 html {
 	font-family:
 		'DM Sans',
@@ -54,50 +58,52 @@ body {
 
 .nav-header {
 	display: flex;
-	width: 80rem;
-	/* max-width: 1280px; */
+	width: 100%;
+	max-width: 1280px;
 	margin-inline: auto;
 	justify-content: space-between;
 	align-items: center;
-	font-family:
+	font:
 		500 1rem/1 'DM Sans',
 		Helvetica,
 		sans-serif;
-	padding: 1.5rem 1.5rem;
+	padding: 1.5rem 1rem;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	background-color: var(--surface-bg);
 	color: var(--ink);
 	text-transform: uppercase;
-	gap: 2rem;
-	flex: 1;
+	gap: 1.5rem;
 }
 
-.navbar-logo-container {
-	display: flex;
-	width: 14rem;
-	align-items: flex-end;
-	gap: 0.1rem;
-	flex-shrink: 0;
-}
-
+.navbar-logo-container,
 .navbar-buttons-container {
 	display: flex;
-	width: 5rem;
 	align-items: center;
-	gap: 0.5rem;
-	flex-shrink: 0;
+	gap: 0.75rem;
+	flex: 0 0 auto;
 }
 
 .navbar-menu-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	flex: 1 1 0;
-	gap: 1rem;
+	flex: 1 1 auto;
+	min-width: 0;
 }
 
 .menu-list {
+	display: flex;
+	flex: 1 1 auto;
+	min-width: 0;
 	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	justify-content: flex-start;
+}
+
+.menu-list a {
 	flex-wrap: nowrap;
 }
 
@@ -119,7 +125,6 @@ body {
 	border: 1.5px solid transparent;
 	cursor: pointer;
 	user-select: none;
-
 	transition:
 		background-color 160ms ease,
 		border-color 160ms ease,
@@ -157,29 +162,7 @@ body {
 	background: var(--surface-bg);
 }
 
-.btn-secondary {
-	background-color: #b4c5e4;
-	color: #0d1321;
-	border-color: #b4c5e4;
-}
-.btn-secondary:hover:not(:disabled):not([aria-disabled='true']) {
-	background-color: #a6b9db;
-	border-color: #a6b9db;
-}
-.btn-secondary:active:not(:disabled):not([aria-disabled='true']) {
-	background-color: #95abd1;
-	border-color: #95abd1;
-}
-
-@media (max-width: 1024px) {
-	.navbar-logo-container {
-		width: auto;
-	}
-	.menu-list {
-		gap: 0.75rem;
-	}
-}
-@media (max-width: 720px) {
+@media (max-width: 900px) {
 	.menu-list {
 		display: none;
 	}
