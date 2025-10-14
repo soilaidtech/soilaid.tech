@@ -10,6 +10,8 @@ The SoilAid Technologies website is our digital front door. It showcases our mis
 
 - Next.js
 - React
+- Tailwind CSS
+- DaisyUI
 
 ## Prerequisites
 
