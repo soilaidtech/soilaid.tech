@@ -14,13 +14,13 @@ export default function Home() {
 		<div className="landing-page flex items-center justify-center m-0 justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
 			<div className="flex flex-col items-center text-center gap-6 max-w-2xl">
 				<Image
-					src="/apple-icon.png"
-					height={200}
-					width={200}
+					src="/images/soilaid-logo.svg"
+					height={400}
+					width={400}
 					alt="logo"
 					className="logo"
 				/>
-				<h1 className="landing-page-heading">SoilAid Technologies</h1>
+				<h2>Clean Cities, Healthy Farms</h2>
 				<p>
 					Designing the Future of Clean Cities and Regenerative
 					Agriculture
@@ -35,6 +35,7 @@ export default function Home() {
 							name={FacebookOutlined}
 							size={40}
 							icon={FacebookOutlined}
+							className="icon"
 						/>
 					</a>
 					<a href="https://x.com/soilaidtech">
@@ -42,6 +43,7 @@ export default function Home() {
 							name={XOutlined}
 							size={40}
 							icon={XOutlined}
+							className="icon"
 						/>
 					</a>
 					<a href="https://ke.linkedin.com/company/soilaidtech">
@@ -49,6 +51,7 @@ export default function Home() {
 							name={LinkedinOutlined}
 							size={40}
 							icon={LinkedinOutlined}
+							className="icon"
 						/>
 					</a>
 
@@ -57,6 +60,7 @@ export default function Home() {
 							name={InstagramOutlined}
 							size={40}
 							icon={InstagramOutlined}
+							className="icon"
 						/>
 					</a>
 					<a href="https://www.tiktok.com/@soilaid.tech">
@@ -64,6 +68,7 @@ export default function Home() {
 							name={TiktokOutlined}
 							size={40}
 							icon={TiktokOutlined}
+							className="icon"
 						/>
 					</a>
 					<a href="mailto:soilaidtech@gmail.com">
@@ -71,6 +76,7 @@ export default function Home() {
 							name={Envelope1Outlined}
 							size={40}
 							icon={Envelope1Outlined}
+							className="icon"
 						/>
 					</a>
 				</div>

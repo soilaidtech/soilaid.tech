@@ -65,14 +65,30 @@ body {
 	opacity: 1;
 	color: #ffffff;
 }
+
 .logo {
-	border-radius: 50%;
+	background: #dfe5c9;
+	padding: 20px;
+	border-radius: 5px;
 }
-.landing-page-heading {
+.landing-page h2 {
 	font-size: 3rem;
 	font-weight: 700;
 	text-align: center;
 	margin-top: 10px;
+	color: #dfe5c9;
+}
+.landing-page p {
+	color: #e8ecd9;
+}
+.landing-page .icon {
+	background-color: #4d5029;
+	border-radius: 50%;
+}
+.landing-page .icon:hover {
+	background-color: #dfe5c9;
+	border-radius: 50%;
+	color: #4d5029;
 }
 .nav-header {
 	display: flex;
