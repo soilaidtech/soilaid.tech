@@ -1,19 +1,24 @@
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
-import { DM_Sans, DM_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import '@/styles/globals.css'
 import React from 'react'
 import ThemeProvider from '@/providers/theme-provider'
 
-const dmSans = DM_Sans({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-})
-
-const dmMono = DM_Mono({
-	variable: '--font-dm-mono',
-	subsets: ['latin'],
-	weight: '400',
+const avenirLT = localFont({
+	src: [
+		{
+			path: '../../public/fonts/avenir-lt-pro/AvenirLTProBlack.otf',
+			weight: '900',
+			style: 'bold',
+		},
+		{
+			path: '../../public/fonts/avenir-lt-pro/AvenirLTProMedium.otf',
+			weight: '400',
+			style: 'normal',
+		},
+	],
+	variable: '--font-avenir-lt-pro',
 })
 
 export const metadata: Metadata = {
@@ -29,7 +34,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${dmSans.variable} ${dmMono.variable} antialiased`}
+				className={`${avenirLT.className} ${avenirLT.className} antialiased`}
 			>
 				<ThemeProvider
 					attribute="class"
