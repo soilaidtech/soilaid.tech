@@ -1,21 +1,86 @@
-import AboutUsComponent from '@/components/about-us'
-import ContactUsComponent from '@/components/contact-us'
-import Header from '@/components/header'
-import HeroComponent from '@/components/hero'
-import OurProductsComponent from '@/components/our-products'
-import OurTeamComponent from '@/components/our-team'
-import ThemeToggleButton from '@/components/ThemeToggleButton'
+import Image from 'next/image'
+import { Lineicons } from '@lineiconshq/react-lineicons'
+import {
+	FacebookOutlined,
+	XOutlined,
+	LinkedinOutlined,
+	InstagramOutlined,
+	TiktokOutlined,
+	Envelope1Outlined,
+} from '@lineiconshq/free-icons'
 
 export default function Home() {
 	return (
-		<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-			<Header />
-			<HeroComponent />
-			<AboutUsComponent />
-			<OurProductsComponent />
-			<OurTeamComponent />
-			<ContactUsComponent />
-			<ThemeToggleButton />
+		<div className="landing-page flex items-center justify-center m-0 justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+			<div className="flex flex-col items-center text-center gap-6 max-w-2xl">
+				<Image
+					src="/images/soilaid-logo.svg"
+					height={400}
+					width={400}
+					alt="logo"
+					className="logo"
+				/>
+				<h2>Clean Cities, Healthy Farms</h2>
+				<p>
+					Designing the Future of Clean Cities and Regenerative
+					Agriculture
+				</p>
+				<div className="flex gap-6 mt-4 justify-center items-center">
+					<a
+						href="https://www.facebook.com/soilaidtech/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Lineicons
+							name={FacebookOutlined}
+							size={40}
+							icon={FacebookOutlined}
+							className="icon"
+						/>
+					</a>
+					<a href="https://x.com/soilaidtech">
+						<Lineicons
+							name={XOutlined}
+							size={40}
+							icon={XOutlined}
+							className="icon"
+						/>
+					</a>
+					<a href="https://ke.linkedin.com/company/soilaidtech">
+						<Lineicons
+							name={LinkedinOutlined}
+							size={40}
+							icon={LinkedinOutlined}
+							className="icon"
+						/>
+					</a>
+
+					<a href="https://www.instagram.com/soilaid.tech/">
+						<Lineicons
+							name={InstagramOutlined}
+							size={40}
+							icon={InstagramOutlined}
+							className="icon"
+						/>
+					</a>
+					<a href="https://www.tiktok.com/@soilaid.tech">
+						<Lineicons
+							name={TiktokOutlined}
+							size={40}
+							icon={TiktokOutlined}
+							className="icon"
+						/>
+					</a>
+					<a href="mailto:soilaidtech@gmail.com">
+						<Lineicons
+							name={Envelope1Outlined}
+							size={40}
+							icon={Envelope1Outlined}
+							className="icon"
+						/>
+					</a>
+				</div>
+			</div>
 		</div>
 	)
 }

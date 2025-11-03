@@ -1,10 +1,16 @@
-import Image from 'next/image';
+import Image from 'next/image'
+import logo from '@/assets/soilaid-logo-green.svg'
 
 export default function Logo() {
-  return (
-    <div>
-      <Image src="/apple-icon.png" width={100} height={40} alt="SOILAID LOGO" />
-      <h1>SOILAID Technologies</h1>
-    </div>
-  );
+	return (
+		<div className="flex items-center ">
+			<Image
+				src={logo}
+				priority
+				width={160}
+				height={40}
+				alt="SoilAid Logo"
+			/>
+		</div>
+	)
 }
