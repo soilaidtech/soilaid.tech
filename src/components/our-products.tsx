@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Image from 'next/image'
+import garbageTruckImage from '../../public/assets/images/garbage-truck-trash-svgrepo-com 1.png'
 
 export default function OurProductsComponent() {
 	return (
@@ -9,7 +10,7 @@ export default function OurProductsComponent() {
 			<div>
 				<div>
 					<Image
-						src="/garbage-truck-trash-svgrepo-com 1.png"
+						src={garbageTruckImage}
 						height={100}
 						width={100}
 						alt="garbage-truck-trash-svg"
