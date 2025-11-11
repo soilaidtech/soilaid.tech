@@ -17,8 +17,8 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-	title: 'SoilAid',
-	description: '',
+	title: 'SoilAid Technologies LTD',
+	description: 'Sustainable Waste Solutions for a Greener Future',
 }
 
 export default function RootLayout({
