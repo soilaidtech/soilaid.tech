@@ -5,22 +5,37 @@
 
 :root {
 	/* ─── Core brand colors ─── */
-	--brand-black: #1f201d;
+	--brand-primary: #545d35;
+	--brand-secondary: #846954;
+	--brand-brown: #545d35;
 	--brand-green: #666833;
-	--brand-brown: #413012;
 
 	/* ─── Neutrals & text ─── */
-	--text-primary: var(--brand-black);
+	--ink: #606060;
+	--text-primary: #10100f;
 	--text-on-dark: #ffffff;
 	--surface-bg: #ffffff;
 	--surface-muted: #f5f5f5;
+	--surface-muted: #f5f5f5;
+	--brand-background: #fefae0;
+	--brand-bg-brown: #dfdfd4;
 
 	/* ─── States / Variants ─── */
 	--brand-green-600: #5a5c2e;
 	--brand-green-700: #4d5029;
+	--brand-light-green: #bde162;
+	--brand-green-300: #a9b388;
+	--brand-dark-green: #052e26;
 	--brand-brown-600: #382a0f;
-
-	/* ─── Interaction feedback ─── */
+	--brand-light-brown: #c6a969;
+	--brand-brown-700: #543b23;
+	--brand-light-brown-100: rgba(132, 105, 84, 0.2);
+	--brand-light-green-100: rgba(
+		189,
+		225,
+		98,
+		0.24
+	); /* ─── Interaction feedback ─── */
 	--hover-bg: #e8ecd9;
 	--active-bg: #dfe5c9;
 	--focus-ring: rgba(102, 104, 51, 0.3);
@@ -139,9 +154,9 @@ body {
 }
 
 .btn-primary {
-	background: var(--brand-green);
+	background: var(--brand-secondary);
 	color: var(--text-on-dark);
-	border-color: var(--brand-green);
+	border-color: var(--brand-secondary);
 }
 .btn-primary:hover:not(:disabled):not([aria-disabled='true']) {
 	background: var(--brand-green-600);
@@ -152,7 +167,7 @@ body {
 
 .btn-outline {
 	background: transparent;
-	color: var(--brand-green);
+	color: var(--brand-secondary);
 	border-color: currentColor;
 }
 .btn-outline:hover:not(:disabled):not([aria-disabled='true']) {
