@@ -1,44 +1,45 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
-import React from 'react';
-import ThemeProvider from '@/providers/theme-provider';
+import { DM_Sans, DM_Mono } from 'next/font/google'
+import '@/styles/globals.css'
+import React from 'react'
+import ThemeProvider from '@/providers/theme-provider'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+const dmSans = DM_Sans({
+	variable: '--font-geist-sans',
+	subsets: ['latin'],
+})
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const dmMono = DM_Mono({
+	variable: '--font-dm-mono',
+	subsets: ['latin'],
+	weight: '400',
+})
 
 export const metadata: Metadata = {
-  title: 'SoilAid',
-  description: '',
-};
+	title: 'SoilAid',
+	description: '',
+}
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={`${dmSans.variable} ${dmMono.variable} antialiased`}
+			>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
+			</body>
+		</html>
+	)
 }
