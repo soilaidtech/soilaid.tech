@@ -100,16 +100,6 @@
       "plugin:@typescript-eslint/recommended",
       "plugin:storybook/recommended",
       "prettier"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.{test,spec}.{ts,tsx,js,jsx}"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
     ]
   }
 }
