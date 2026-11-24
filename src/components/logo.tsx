@@ -4,7 +4,7 @@ export default function Logo() {
 	return (
 		<div className="flex items-center ">
 			<Image
-				src="public/images/soilaid-logo.svg"
+				src="/images/soilaid-logo.svg"
 				priority
 				width={160}
 				height={40}
